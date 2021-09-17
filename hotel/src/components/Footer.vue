@@ -71,8 +71,8 @@ export default {
   .img2{
     z-index: 10;
     margin:30px 50px;
-    width: 600px;
-    height: 66.18px;
+    width: 45vw;
+    height: 12vh;
   }
 
   .flex-right{

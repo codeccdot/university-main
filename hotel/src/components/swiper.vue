@@ -1,6 +1,6 @@
 <template>
 <div class="swiper" >
-  <v-carousel :show-arrows="false" style="width: 80vw ;height: 400px">
+  <v-carousel class="swiper-item"  :show-arrows="false"  style="height: 68vh ">
     <v-carousel-item
         v-for="(item,i) in items"
         :key="i"
@@ -43,9 +43,13 @@ export default {
 <style  lang="scss" scoped>
 .swiper{
   display: flex;
-  justify-content: center;position: relative;
-  top: 3px;
-
+  justify-content: center;
+  position: relative;
+  top: 1.6vh;
+.swiper-item{
+  width: 90.6vw;
+  height:150px;
+}
 
 }
 
