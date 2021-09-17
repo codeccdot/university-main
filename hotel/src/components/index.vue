@@ -1,19 +1,21 @@
 <template>
 <div id="index">
-<Footer></Footer>
+  <Header></Header>
 <Swiper></Swiper>
 <Mid></Mid>
+  <Footer></Footer>
 </div>
 </template>
 
 <script>
-import Footer from '@/components/Footer'
+import Header from '@/components/Header'
 import Swiper from '@/components/swiper'
 import Mid from '@/components/mid-nav'
+import Footer from '@/components/Footer'
 export default {
   name: "index",
 components:{
-    Footer,Swiper,Mid
+  Header,Swiper,Mid,Footer
 }
 ,
   data(){
