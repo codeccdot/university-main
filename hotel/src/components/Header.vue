@@ -1,8 +1,11 @@
 <template>
-<div id="footer" style="background-color:#7D0000">
+<div id="header" style="background-color:#7D0000">
  <img  class="img2" :src="img2" alt="">
    <div class="flex-right" ><span>校长邮箱</span><span>English Version</span></div>
 <div class="line"></div>
+  <div class="search">
+    <Search></Search>
+  </div>
   <div class="container">
     <div class="row">
       <div class="col-xl-1"><p>首页</p></div>
@@ -24,8 +27,12 @@
 </template>
 
 <script>
+import Search from "@/components/search";
 export default {
   name: "Footer",
+  components:{
+    Search
+  },
   data(){
     return{
       img1:[require('@/assets/footer-bg.jpg')],
@@ -38,11 +45,16 @@ export default {
 
 <style lang="scss" scoped>
 
-#footer{
+#header{
   width: 100vw;
   height: 170px;
   margin: 20px 0;
 
+  .search{
+    border-radius: 20px;
+    font-size: 12px;
+
+  }
   .container{
     color: ghostwhite;
     position: relative;

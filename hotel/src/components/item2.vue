@@ -3,6 +3,7 @@
   <span class="font">
     <a href="#">学术动态</a>
   </span>
+  <img src="../assets/dots-horizontal.png" alt="" style="position: relative;left: 120px">
   <div class="dataBox" v-for="(item,index) in boxs " :key="index">
    <div class="date"  >
       <span>{{item.day}}</span>

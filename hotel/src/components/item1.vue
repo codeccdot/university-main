@@ -1,13 +1,12 @@
 <template>
 <div class="item1">
-  <span class="font">学校要闻</span>
-  <span class="font">校园动态</span>
+  <span class="font"><router-link to="/img">学校要闻</router-link></span>
+  <span class="font"><router-link to="/img2">校园动态</router-link></span>
+  <img src="../assets/dots-horizontal.png" alt="" style="position: relative;left: 450px">
   <v-divider inset class="line"></v-divider>
+  
 <div class="img-show">
-<div class="box" v-for="(item,i) in img"  :key="i">
-  <img :src="item.src" >
-  <span class="subtitle"><a href="">{{item.main}}</a></span>
-</div>
+<router-view></router-view>
 
 </div>
   <v-divider inset class="line"></v-divider>
@@ -16,22 +15,12 @@
 </template>
 
 <script>
+
 export default {
   name: "item1",
   data(){
     return{
-      img: [
-        {
-          src: require('@/assets/item1.png'),
-          main:'开学典礼 电气与计算机学院院长第一课暨20...'
-        },{
-          src: require('@/assets/item2.png'),
-          main:'开学典礼 电气与计算机学院院长第一课暨20...'
-        },{
-          src: require('@/assets/item3.png'),
-          main:'开学典礼 电气与计算机学院院长第一课暨20...'
-        }
-      ]
+
     }
   }
 }
@@ -45,6 +34,10 @@ export default {
   margin-right: 15px;
   padding-bottom: 7px;
   padding-left: 5px; padding-right: 5px;
+  a{
+    color: black;
+    text-decoration: none;
+  }
 
 }
 .font:hover{
@@ -78,12 +71,10 @@ export default {
      color: darken(#7D0000,10%);
      text-decoration: none;
    }
-
  }
   img{
     width: 206px;
     min-height: 154px;
-
     margin: 4px 7px;
 
   }

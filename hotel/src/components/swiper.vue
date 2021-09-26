@@ -1,6 +1,6 @@
 <template>
 <div class="swiper" >
-  <v-carousel class="swiper-item"  :show-arrows="false"  style="height: 68vh ">
+  <v-carousel class="swiper-item"  :show-arrows="false"  style="height: 68vh "  cycle="true" interval="5000">
     <v-carousel-item
         v-for="(item,i) in items"
         :key="i"
